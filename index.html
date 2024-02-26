@@ -12,26 +12,50 @@
 <body>
     <!-- HEADER -->
     <header>
-        <div class="row">
-            <!-- divido l'header in due macro-colonne: una con logo e nav, e l'altra con il formn di ricerca, in modo da poter allineare nella prima colonna tutto a sinistra (start) e da tablet in poi disporre agli estremi, e nascondere il form di ricerca -->
-            <div class="col row">
-                <div class="col-auto">icona</div>
-                <div class="col">nav</div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="img/duck.png" alt="lofGo duck" height="60">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- la navbar è già flex. se aggiungiamo d-flex non racchiude il div nell'hamburger al restringersi della finestra -->
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Anagrafica Utenti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Storico Prestiti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Help</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
             </div>
-            <div class="col">
-                <div>form ricerca</div>
-            </div>
-        </div>
+
+
+        </nav>
     </header>
     <!-- /HEADER -->
     <!-- MAIN -->
     <main class="container-md">
         <div class="row">
             <!-- colonna più larga su dextop -->
-            <div class="col-xxl-9"></div>
+            <div class="col-lg-9"></div>
 
             <!-- colonna laterale su dextop -->
-            <div class="col-xxl-auto"></div>
+            <div class="col-lg-auto"></div>
         </div>
     </main>
     <!-- $$$ -->
